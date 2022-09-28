@@ -1,0 +1,6 @@
+name: TimaNekos
+version: '${project.version}'
+main: ovh.rootkovskiy.timanekos.Main
+authors: [ timurroot ]
+description: This plugin add Neko girls in Minecraft
+website: www.rootkovskiy.ovh
