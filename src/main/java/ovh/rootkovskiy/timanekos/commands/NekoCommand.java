@@ -24,6 +24,18 @@ public class NekoCommand implements CommandExecutor {
             ChatUtils.sendMessage(sender, ConfigManager.getInvalidUsage());
         }
 
+        Player player = (Player) sender;
+
+        switch (args[0].toLowerCase()) {
+            case "on":
+                ChatUtils.sendMessage(player, ConfigManager.getNekoOn());
+                //todo: start neko mechanics
+                return true;
+            case "off":
+                ChatUtils.sendMessage(player, ConfigManager.getNekoOff());
+                //todo stop neko mechanics
+                return true;
+        }
         return true;
     }
 }
