@@ -18,10 +18,12 @@ public class NekoCommand implements CommandExecutor {
 
         if (!(sender.hasPermission("neko.use"))) {
             ChatUtils.sendMessage(sender, ConfigManager.getNoPerms());
+            return true;
         }
 
         if (args.length != 1) {
             ChatUtils.sendMessage(sender, ConfigManager.getInvalidUsage());
+            return true;
         }
 
         Player player = (Player) sender;
@@ -34,6 +36,12 @@ public class NekoCommand implements CommandExecutor {
             case "off":
                 ChatUtils.sendMessage(player, ConfigManager.getNekoOff());
                 //todo stop neko mechanics
+                return true;
+            case "add":
+
+                return true;
+            case "remove":
+
                 return true;
         }
         return true;
